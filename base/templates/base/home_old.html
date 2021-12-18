@@ -1,0 +1,38 @@
+{% extends 'main.html' %} {% block contant %}
+
+<style>
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+    }
+</style>
+<div class="container">
+
+    <div>
+        {%include 'base/topics.html' %}
+    </div>
+
+    <div>
+
+
+        <h5>{{count}} room avileb</h5>
+
+        <a href="{%url 'create_room' %}">create room</a>
+        <div>
+            {%include 'base/feed.html' %}
+        </div>
+
+
+
+    </div>
+
+    <div>
+        {%include 'base/activity.html' %}
+    </div>
+
+</div>
+
+
+
+
+{% endblock%}
